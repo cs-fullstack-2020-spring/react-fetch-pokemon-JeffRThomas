@@ -16,6 +16,7 @@ class AppContainer extends Component {
     loadData = async () => {
         const pokereference = await fetch('https://pokeapi.co/api/v2/pokemon?limit=900')
         let returnInfo = await pokereference.json();
+        // console log your returned json - returnInfo is an object not an array
         this.setState({ Pokemon: returnInfo });
         console.log(this.state.Pokemon);
     };
@@ -31,7 +32,8 @@ class AppContainer extends Component {
                         </div>
                     )
                 })
-            </Fragment>
+            //  } you were missing a curly here - I put it back to test your code
+            </Fragment> // the error on this line literally says "curly brace expected"
         )
     };
 };

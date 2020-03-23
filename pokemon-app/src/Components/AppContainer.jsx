@@ -17,7 +17,7 @@ class AppContainer extends Component {
         const pokereference = await fetch('https://pokeapi.co/api/v2/pokemon?limit=900')
         let returnInfo = await pokereference.json();
         this.setState({ Pokemon: returnInfo });
-        console.log(this.setState.Pokemon);
+        console.log(this.state.Pokemon);
     };
 
     render() {
